@@ -35,6 +35,7 @@ public class RoleService {
         return StreamSupport.stream(iRolesRepository.findAll().spliterator(),false)
                 .map(roleMapper::toRoleDto).collect(Collectors.toList());
  }
+
  @Transactional(readOnly = true)
 public RoleDto getRoleByIdDto(int id){
         return roleMapper.toRoleDto(iRolesRepository.findById(id)

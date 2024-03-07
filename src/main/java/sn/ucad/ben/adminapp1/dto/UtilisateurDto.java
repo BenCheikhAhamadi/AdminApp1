@@ -18,6 +18,7 @@ public class UtilisateurDto {
     private String email;
     @NotNull(message = "Le mot de passe ne doit pas etre null")
     private String password;
+    @NotNull(message ="L'etat ne doit pas etre null" )
     private int etat;
 
 }

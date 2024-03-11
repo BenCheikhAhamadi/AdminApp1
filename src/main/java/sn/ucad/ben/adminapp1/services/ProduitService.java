@@ -56,7 +56,7 @@ public class ProduitService {
                     produitDto.setId(id);
                     return produitMapper.toProduit(iProduitRepository.save(produitMapper.fromProduit(produitDto)));
 
-                }).orElseThrow(() -> new EntityNotFoundException(messageSource.getMessage("user.notfound", new Object[]{id},
+                }).orElseThrow(() -> new EntityNotFoundException(messageSource.getMessage("produit.notfound", new Object[]{id},
                         Locale.getDefault())));
 
     }
